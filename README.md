@@ -19,7 +19,7 @@ https://huggingface.co/settings/tokens
 or easier to simply use `huggingface-cli` after install
 
 ## stable diffusion 1.4 https://github.com/CompVis/stable-diffusion
-conda create --name stable_diff2 python=3.9.13
+conda create --name stable_diff python=3.9.13
 
 conda activate stable_diff
 
