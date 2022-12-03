@@ -43,7 +43,7 @@ conda create --name stable_diff2 python=3.9.13
 
 conda activate stable_diff2
 
-pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torch --extra-index-url https://download.pytorch.org/whl/cu117
 
 pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
 
@@ -58,4 +58,38 @@ python src/sd20_generate.py "Beautiful landscape with mountains, inspired by ant
 pip install ninja
 
 pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+```
+
+
+## using the stablediffusion submodule (not working yet)
+
+Instead of using my :poop: python, use the stablediffusion code instead!
+
+clone above env:
+```
+conda deactivate
+conda create --name stable_diff_real --clone stable_diff2
+conda activate stable_diff_real
+```
+
+more installations:
+```
+git submodule init
+git submodule update
+git submodule foreach git pull origin master
+
+cd stablediffusion
+pip install transformers==4.19.2 diffusers invisible-watermark
+pip install -r requirements.txt
+```
+
+This file is 5gb!
+```
+cd stablediffusion
+wget https://huggingface.co/stabilityai/stable-diffusion-2/resolve/main/768-v-ema.ckpt
+```
+
+run it!
+```
+python ./scripts/txt2img.py --prompt "a professional photograph of an astronaut riding a donkey"  --ckpt ./768-v-ema.ckpt
 ```
