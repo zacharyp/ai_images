@@ -16,7 +16,6 @@ if sys.argv[1]:
 
 print("generating image for prompt: " + prompt)
 
-# steps = 50
 steps = 100
 
 image = pipe(prompt, height=768, width=768, num_inference_steps=steps).images[0]
