@@ -1,7 +1,5 @@
 # ai_images
-Creating AI images using Stable Diffusion (and others?)
-
-
+Creating AI images using Stable Diffusion (and others?) in the WSL2 with an Nvidia GPU
 
 ## nvidia
 
