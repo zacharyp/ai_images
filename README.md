@@ -19,6 +19,8 @@ https://huggingface.co/settings/tokens
 or easier to simply use `huggingface-cli` after install
 
 ## stable diffusion 1.4 https://github.com/CompVis/stable-diffusion
+
+```
 conda create --name stable_diff python=3.9.13
 
 conda activate stable_diff
@@ -32,8 +34,11 @@ pip install accelerate
 huggingface-cli login
 
 python src/sd14_generate.py
+```
 
 ## stable diffusion 2.0 https://huggingface.co/stabilityai/stable-diffusion-2
+
+```
 conda create --name stable_diff2 python=3.9.13
 
 conda activate stable_diff2
@@ -45,6 +50,8 @@ pip install --upgrade git+https://github.com/huggingface/diffusers.git transform
 huggingface-cli login
 
 python src/sd20_generate.py "Beautiful landscape with mountains, inspired by antoni gaudi, sunset"
+```
 
-## maybe?  NOPE, installs fucked up torch without cuda
-conda install xformers -c xformers/label/dev
+## maybe for better memory usage?  NOPE, installs fucked up torch without cuda
+
+`conda install xformers -c xformers/label/dev`
