@@ -52,6 +52,10 @@ huggingface-cli login
 python src/sd20_generate.py "Beautiful landscape with mountains, inspired by antoni gaudi, sunset"
 ```
 
-## maybe for better memory usage?  NOPE, installs fucked up torch without cuda
+## maybe for better memory usage?
 
-`conda install xformers -c xformers/label/dev`
+```
+pip install ninja
+
+pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+```
