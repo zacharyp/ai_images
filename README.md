@@ -47,9 +47,23 @@ pip install torch --extra-index-url https://download.pytorch.org/whl/cu117
 
 pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
 
+pip install omegaconf opencv-python einops torchvision
+
 huggingface-cli login
 
 python src/sd20_generate.py "Beautiful landscape with mountains, inspired by antoni gaudi, sunset"
+```
+
+##
+
+```
+conda env create -f environment.yaml
+conda activate sd2
+
+conda install pytorch torchvision -c pytorch
+pip install transformers==4.19.2 diffusers 
+pip install -e .
+
 ```
 
 ## maybe for better memory usage?

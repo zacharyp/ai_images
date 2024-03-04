@@ -16,9 +16,9 @@ if sys.argv[1]:
 
 print("generating image for prompt: " + prompt)
 
-steps = 100
+steps = 70
 
-image = pipe(prompt, height=768, width=768, num_inference_steps=steps).images[0]
-
-image_name = prompt.replace(" ", "_")
-image.save("img/" + image_name + ".png")
+for i in range(4):
+    image = pipe(prompt, height=768, width=768, num_inference_steps=steps).images[0]
+    image_name = prompt.replace(" ", "_")
+    image.save("img/" + image_name + "_" + str(i) + ".png")
